@@ -1,0 +1,5 @@
+FROM grafana/grafana:8.0.6
+# Puedes agregar configuraciones personalizadas si es necesario
+# COPY grafana.ini /etc/grafana/grafana.ini
+EXPOSE 3000
+CMD ["grafana-server", "--config=/etc/grafana/grafana.ini"]

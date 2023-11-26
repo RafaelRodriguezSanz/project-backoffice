@@ -1,0 +1,2 @@
+FROM redislabs/redisinsight:latest
+EXPOSE 8001

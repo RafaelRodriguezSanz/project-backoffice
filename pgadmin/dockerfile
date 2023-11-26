@@ -1,0 +1,4 @@
+FROM dpage/pgadmin4
+# COPY tu-archivo-de-configuracion.pgadmin4 /pgadmin4/
+EXPOSE 80
+CMD ["/usr/local/bin/start.sh"]
