@@ -1,2 +1,0 @@
-FROM datastax/dse-studio
-EXPOSE 9091
