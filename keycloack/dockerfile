@@ -1,0 +1,18 @@
+# Usa una imagen base de Keycloak
+FROM jboss/keycloak:latest
+
+# Copia el archivo de configuración personalizado (si es necesario)
+# COPY keycloak-config-file.json /path/to/keycloak/standalone/configuration/
+ENV KEYCLOAK_ADMIN=admin
+ENV KEYCLOAK_ADMIN_PASSWORD=password123
+ENV KEYCLOAK_USER=admin
+ENV KEYCLOAK_PASSWORD=password123
+ENV KC_HEALTH_ENABLED=true
+ENV KC_METRICS_ENABLED=true
+ENV DB_VENDOR=h2
+
+# Expone el puerto en el que Keycloak escucha
+EXPOSE 8080
+
+# Comando por defecto para iniciar Keycloak
+CMD ["-b", "0.0.0.0"]

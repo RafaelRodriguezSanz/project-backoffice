@@ -1,4 +1,6 @@
 FROM dpage/pgadmin4
 # COPY tu-archivo-de-configuracion.pgadmin4 /pgadmin4/
+ENV PGADMIN_DEFAULT_EMAIL=admin@example.com
+ENV PGADMIN_DEFAULT_PASSWORD=password123
 EXPOSE 80
 CMD ["/usr/local/bin/start.sh"]

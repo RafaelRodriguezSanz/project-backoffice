@@ -1,0 +1,17 @@
+# Use the official Redpanda Console image
+FROM redpandadata/console:latest
+
+# Set the working directory
+WORKDIR /app
+
+# Set environment variables
+ENV KAFKA_BROKERS=redpanda:9092
+ENV SCHEMA_REGISTRY_ENABLED=true
+ENV SCHEMA_REGISTRY_URLS=http://redpanda:8081
+ENV REDPANDA_ADMIN_API_ENABLED=true
+ENV REDPANDA_ADMIN_API_URLS=http://redpanda:9644
+
+# Expose the Console port
+EXPOSE 8085
+
+CMD ["redpanda", "start"]

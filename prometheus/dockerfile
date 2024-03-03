@@ -1,0 +1,11 @@
+# Usa una imagen base de Prometheus
+FROM prom/prometheus
+
+# Copia el archivo de configuración al contenedor
+#COPY prometheus.yml /etc/prometheus/
+
+# Exponer el puerto en el que Prometheus escucha
+EXPOSE 9090
+
+# Comando por defecto para iniciar Prometheus
+CMD ["--config.file=/etc/prometheus/prometheus.yml", "--web.enable-lifecycle"]
