@@ -1,5 +1,7 @@
 FROM grafana/grafana:8.0.6
 # Puedes agregar configuraciones personalizadas si es necesario
 # COPY grafana.ini /etc/grafana/grafana.ini
+ENV GF_SECURITY_ADMIN_USER="admin"
+ENV GF_SECURITY_ADMIN_PASSWORD="password123"
 EXPOSE 3000
-CMD ["grafana-server", "--config=/etc/grafana/grafana.ini"]
+CMD ["grafana-server"]

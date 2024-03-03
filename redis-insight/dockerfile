@@ -1,2 +1,8 @@
+# Usa la imagen base de RedisInsight
 FROM redislabs/redisinsight:latest
-EXPOSE 8001
+
+# Personaliza la configuración si es necesario
+# COPY redisinsight.conf /usr/src/redisinsight/
+
+# Exponer el puerto en el que escucha RedisInsight
+EXPOSE 5540
